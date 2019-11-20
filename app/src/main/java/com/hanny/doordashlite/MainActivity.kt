@@ -12,6 +12,9 @@ import com.google.android.gms.location.LocationServices
 import com.hanny.doordashlite.helpers.LOCATION_REQUEST_CODE
 import com.hanny.doordashlite.models.Restaurant
 import com.hanny.doordashlite.view.LocalResListAdapter
+import androidx.recyclerview.widget.DividerItemDecoration
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,6 +38,12 @@ class MainActivity : AppCompatActivity() {
         val viewManager = LinearLayoutManager(this)
         val viewAdapter = LocalResListAdapter(restaurants)
         val recyclerView = findViewById<RecyclerView>(R.id.restaurants_list)
+        recyclerView.addItemDecoration(
+            DividerItemDecoration(
+                this,
+                DividerItemDecoration.VERTICAL
+            )
+        );
 
         recyclerView.layoutManager = viewManager
         recyclerView.adapter = viewAdapter
