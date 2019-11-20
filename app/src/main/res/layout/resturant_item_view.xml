@@ -29,12 +29,15 @@
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 android:textSize="16sp"
+                android:ellipsize="end"
                 android:textStyle="bold"/>
 
         <TextView
                 android:id="@+id/restaurant_descriptions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:maxLines="6"
+                android:ellipsize="end"
                 android:textSize="16sp" />
 
     </LinearLayout>
